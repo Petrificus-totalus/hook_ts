@@ -1,9 +1,10 @@
 import React, { FC, useContext } from "react";
 import { Card, Col, Space } from "antd";
 import { appContext } from "../index";
+import { Link } from "react-router-dom";
 const { Meta } = Card;
 
-interface BookType {
+export interface BookType {
   id: number;
   name: string;
   price: number;
@@ -16,8 +17,16 @@ const BookInfo: FC<BookType> = ({ id, name, price, pic, desc }) => {
     <Col span={6}>
       <Card
         hoverable
-        style={{ width: 240 }}
-        cover={<img alt="example" src={pic} />}
+        style={{ width: 240, textAlign: "center" }}
+        cover={
+          <Link to={`/bookdetail/${id}`}>
+            <img
+              alt="example"
+              src={pic}
+              style={{ width: "75%", margin: "auto", paddingTop: "20px" }}
+            />
+          </Link>
+        }
       >
         <Meta
           title={

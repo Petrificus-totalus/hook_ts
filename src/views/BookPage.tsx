@@ -4,7 +4,7 @@ import { Card, Col, Row } from "antd";
 import { Link } from "react-router-dom";
 import BookInfo from "../components/BookInfo";
 
-const bookList = [
+export const bookList = [
   {
     id: 1,
     name: "book1",

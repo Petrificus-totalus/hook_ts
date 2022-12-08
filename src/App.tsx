@@ -10,6 +10,7 @@ import IndexPage from "./views/IndexPage";
 import BookPage from "./views/BookPage";
 import UserPage from "./views/UserPage";
 import Login from "./views/Login";
+import BookDetail from "./views/BookDetail";
 const { Footer, Content } = Layout;
 const App: FC = () => (
   <div className="App">
@@ -18,7 +19,7 @@ const App: FC = () => (
       <Content style={{ height: "80vh" }}>
         <Routes>
           <Route path="/login" element={<Login />}></Route>
-
+          <Route path="/bookdetail/:id" element={<BookDetail />}></Route>
           <Route path="/index" element={<IndexPage />}></Route>
           <Route path="/book" element={<BookPage />}></Route>
           <Route path="/user" element={<UserPage />}></Route>

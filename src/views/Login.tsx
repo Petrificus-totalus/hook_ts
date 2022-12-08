@@ -6,7 +6,9 @@ const Login: React.FC = () => {
   const nav = useNavigate();
   const onFinish = (values: any) => {
     console.log("Success:", values);
-    nav("/index");
+    // nav("/index");
+    nav("/index", { state: { username: values.name } }); // 带参数跳转，那边用 useLocation 接
+    // 必须是state
   };
 
   const onFinishFailed = (errorInfo: any) => {

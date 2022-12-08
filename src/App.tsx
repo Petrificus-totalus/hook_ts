@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Button, Layout } from "antd";
+import { Layout } from "antd";
 
 import "antd/dist/reset.css";
 import "./App.css";

@@ -1,6 +1,7 @@
 import React, { FC, useState, useRef } from "react";
 import { Card, Row, Col } from "antd";
 import useMouse from "../hooks/useMouse";
+import { useLocation } from "react-router-dom";
 
 const IndexPage: FC = () => {
   const [like, setLike] = useState(0);
@@ -10,6 +11,9 @@ const IndexPage: FC = () => {
   const password = useRef<any>();
   const [rnd, setRnd] = useState(0);
   const t = useRef<any>(); // 暂时保存一个值
+
+  const loc = useLocation();
+  // console.log(loc);
 
   const start = () => {
     t.current = setInterval(() => {
@@ -23,7 +27,7 @@ const IndexPage: FC = () => {
   return (
     <Row>
       <Col span={20} offset={2}>
-        <Card title="useState">
+        <Card title="useState" extra={<span>{loc.state.username}</span>}>
           <div>
             <button onClick={() => setLike(like + 1)}>like:{like}</button>
           </div>

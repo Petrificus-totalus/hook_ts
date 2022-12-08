@@ -11,6 +11,7 @@ const PageHeader: FC = () => {
         <Link to="/index">首页</Link>
         <Link to="/book">图书列表</Link>
         <Link to="/user">用户</Link>
+        <Link to="/login">登陆</Link>
       </Space>
     </Header>
   );

@@ -1,6 +1,6 @@
-import React, { FC } from "react";
+import React, { FC, useContext } from "react";
 import { Card, Col, Space } from "antd";
-
+import { appContext } from "../index";
 const { Meta } = Card;
 
 interface BookType {
@@ -11,6 +11,7 @@ interface BookType {
   desc: string;
 }
 const BookInfo: FC<BookType> = ({ id, name, price, pic, desc }) => {
+  const value = useContext(appContext);
   return (
     <Col span={6}>
       <Card
@@ -24,6 +25,7 @@ const BookInfo: FC<BookType> = ({ id, name, price, pic, desc }) => {
               <Space>
                 <span>{name}</span>
                 <span>¥{price}</span>
+                <span>{value.username}</span>
               </Space>
             </div>
           }

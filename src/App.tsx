@@ -9,6 +9,7 @@ import PageHeader from "./components/PageHeader";
 import IndexPage from "./views/IndexPage";
 import BookPage from "./views/BookPage";
 import UserPage from "./views/UserPage";
+import Login from "./views/Login";
 const { Footer, Content } = Layout;
 const App: FC = () => (
   <div className="App">
@@ -16,6 +17,8 @@ const App: FC = () => (
       <PageHeader />
       <Content style={{ height: "80vh" }}>
         <Routes>
+          <Route path="/login" element={<Login />}></Route>
+
           <Route path="/index" element={<IndexPage />}></Route>
           <Route path="/book" element={<BookPage />}></Route>
           <Route path="/user" element={<UserPage />}></Route>

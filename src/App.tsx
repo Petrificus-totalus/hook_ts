@@ -11,6 +11,9 @@ import BookPage from "./views/BookPage";
 import UserPage from "./views/UserPage";
 import Login from "./views/Login";
 import BookDetail from "./views/BookDetail";
+import GoodsPage from "./views/GoodsPage";
+import GoodsList from "./views/GoodsList";
+import GoodsSale from "./views/GoodsSale";
 const { Footer, Content } = Layout;
 const App: FC = () => (
   <div className="App">
@@ -22,6 +25,11 @@ const App: FC = () => (
           <Route path="/bookdetail/:id" element={<BookDetail />}></Route>
           <Route path="/index" element={<IndexPage />}></Route>
           <Route path="/book" element={<BookPage />}></Route>
+          <Route path="/goods" element={<GoodsPage />}>
+            <Route path="" element={<GoodsList />} />
+            <Route path="/goods/sale" element={<GoodsSale />} />
+          </Route>
+
           <Route path="/user" element={<UserPage />}></Route>
           <Route
             path="/"

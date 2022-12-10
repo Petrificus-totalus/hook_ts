@@ -27,7 +27,10 @@ const IndexPage: FC = () => {
   return (
     <Row>
       <Col span={20} offset={2}>
-        <Card title="useState" extra={<span>{loc.state.username}</span>}>
+        <Card
+          title="useState"
+          extra={<span>{loc.state && loc.state.username}</span>}
+        >
           <div>
             <button onClick={() => setLike(like + 1)}>like:{like}</button>
           </div>

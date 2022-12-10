@@ -12,6 +12,7 @@ const PageHeader: FC = () => {
         <Link to="/book">图书列表</Link>
         <Link to="/user">用户</Link>
         <Link to="/login">登陆</Link>
+        <Link to="/goods">商品信息</Link>
       </Space>
     </Header>
   );
